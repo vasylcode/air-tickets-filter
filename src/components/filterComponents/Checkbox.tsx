@@ -5,7 +5,7 @@ interface ICheckbox {
 	only: boolean;
 }
 
-export default function Checkbox({ name, only }: ICheckbox) {
+export default function Checkbox({ name, only = false }: ICheckbox) {
 	return (
 		<div className='checkbox'>
 			<label>

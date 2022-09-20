@@ -11,13 +11,14 @@ $checkbox-checked: #2196f3
 	display: flex
 	align-items: center
 	margin: 5px 0
+	cursor: pointer
 
 .checkbox input[type="checkbox"] 
 	-webkit-appearance: none
 	appearance: none
 	width: 25px
 	height: 25px
-	border: 1px solid $checkbox-border
+	border: 2px solid $checkbox-border
 	border-radius: 3px
 	outline: none
 	cursor: pointer
@@ -25,7 +26,7 @@ $checkbox-checked: #2196f3
 	margin-right: 12px
 	&:checked 
 		background-color: $checkbox-background
-		border: 1px solid $checkbox-checked
+		border: 2px solid $checkbox-checked
 		position: relative
 	&::before 
 		content: "\2713"
