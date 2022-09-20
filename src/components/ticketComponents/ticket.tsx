@@ -1,5 +1,9 @@
 import React from 'react';
 
-export default function ticket() {
-	return <div className='ticket'></div>;
+export default function Ticket({ transfers }: any) {
+	return (
+		<>
+			<div className='ticket'>{transfers}</div>
+		</>
+	);
 }

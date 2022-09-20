@@ -16,6 +16,7 @@ $checkbox-checked: #2196f3
 .checkbox input[type="checkbox"] 
 	-webkit-appearance: none
 	appearance: none
+	// accent-color: $checkbox-checked
 	width: 25px
 	height: 25px
 	border: 2px solid $checkbox-border
@@ -28,13 +29,13 @@ $checkbox-checked: #2196f3
 		background-color: $checkbox-background
 		border: 2px solid $checkbox-checked
 		position: relative
-	&::before 
-		content: "\2713"
-		font-size: 25px
-		color: $checkbox-checked
-		position: absolute
-		right: 1px
-		top: -7px
+		&::before
+			content: "\2713"
+			font-size: 25px
+			color: $checkbox-checked
+			position: absolute
+			right: 1px
+			top: -7px
 
 .checkbox span
 	font-size: 15px
