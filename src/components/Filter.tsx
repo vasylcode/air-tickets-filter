@@ -21,7 +21,7 @@ const Filter: React.FC = () => {
 				<div className='filter__title'>number of transfers</div>
 				<div className='filter__checkboxes'></div>
 				{checkboxes.map(box => (
-					<Checkbox name={box.name} only={box.only} />
+					<Checkbox key={box.name} name={box.name} only={box.only} />
 				))}
 			</>
 		</div>
