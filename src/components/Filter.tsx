@@ -19,10 +19,11 @@ const Filter: React.FC = () => {
 		<div className='filter'>
 			<>
 				<div className='filter__title'>number of transfers</div>
-				<div className='filter__checkboxes'></div>
-				{checkboxes.map(box => (
-					<Checkbox key={box.name} name={box.name} only={box.only} />
-				))}
+				<div className='filter__checkboxes'>
+					{checkboxes.map(box => (
+						<Checkbox key={box.name} name={box.name} only={box.only} />
+					))}
+				</div>
 			</>
 		</div>
 	);
