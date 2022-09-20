@@ -1,0 +1,41 @@
+$checkbox-background: #ffffff
+$checkbox-border: #D2D5D6
+$checkbox-checked: #2196f3
+
+.checkbox
+	display: flex
+	align-items: center
+	justify-content: space-between	
+
+.checkbox label
+	display: flex
+	align-items: center
+	margin: 5px 0
+
+.checkbox input[type="checkbox"] 
+	-webkit-appearance: none
+	appearance: none
+	width: 25px
+	height: 25px
+	border: 1px solid $checkbox-border
+	border-radius: 3px
+	outline: none
+	cursor: pointer
+	margin-left: 0
+	margin-right: 12px
+	&:checked 
+		background-color: $checkbox-background
+		border: 1px solid $checkbox-checked
+		position: relative
+	&::before 
+		content: "\2713"
+		font-size: 25px
+		color: $checkbox-checked
+		position: absolute
+		right: 1px
+		top: -7px
+
+.checkbox span
+	font-size: 15px
+	color: $checkbox-checked
+	cursor: pointer
