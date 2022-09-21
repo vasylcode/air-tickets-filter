@@ -7,7 +7,8 @@ export const api = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
 	endpoints: build => ({
 		getApi: build.query<Ticket[], void>({
-			query: () => 'tickets',
+			query: () => `tickets`,
+			// query: (transfers: number) => `tickets?${transfers && `transfers=${transfers}`}`,
 			// transformResponse: (response: ServerResponse) => response.tickets,
 		}),
 	}),

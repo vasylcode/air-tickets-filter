@@ -6,3 +6,8 @@ export interface Ticket {
 export interface ServerResponse {
 	tickets: Ticket[];
 }
+
+export interface ICheckbox {
+	name: string;
+	only: boolean;
+}

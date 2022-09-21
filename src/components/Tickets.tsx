@@ -7,7 +7,7 @@ const Tickets: React.FC = () => {
 	return (
 		<div className='tickets'>
 			<>
-				{data?.map(ticket => (
+				{data?.map((ticket: any) => (
 					<Ticket key={ticket.id} transfers={ticket.transfers} />
 				))}
 			</>
