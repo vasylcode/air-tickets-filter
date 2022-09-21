@@ -1,10 +1,11 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../redux/hooks';
 import { setTransfer, toggleTransferItem } from '../redux/slice';
 
 export default function Transfers() {
 	const transfers = useAppSelector(state => state.transfers.transfers);
-	console.log(transfers);
+	const dispatch = useDispatch();
 	return (
 		<div className='filter'>
 			<div className='filter__title'>number of transfers</div>
@@ -12,10 +13,10 @@ export default function Transfers() {
 				{transfers.map((box: any) => (
 					<div className='checkbox' key={box.id}>
 						<label>
-							<input type='checkbox' checked={box.status} onChange={() => toggleTransferItem!(box)} />
+							<input type='checkbox' checked={box.status} onChange={() => dispatch(toggleTransferItem!(box))} />
 							{box.name}
 						</label>
-						{box.only && <span onClick={() => setTransfer!(box)}>only</span>}
+						{box.only && <span onClick={() => dispatch(setTransfer!(box))}>only</span>}
 					</div>
 				))}
 			</div>

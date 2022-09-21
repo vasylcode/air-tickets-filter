@@ -6,7 +6,7 @@ const initialState = {
 			id: 1,
 			name: 'all',
 			only: false,
-			status: false,
+			status: true,
 			value: -1,
 		},
 		{
@@ -45,13 +45,19 @@ const slice = createSlice({
 	initialState,
 	reducers: {
 		toggleTransferItem(state, action) {
-			console.log(state);
-			console.log(action);
+			state.transfers = state.transfers.map(item => {
+				if (item.id === action.payload.id) {
+					return {
+						...item,
+						status: !item.status,
+					};
+				}
+				return item;
+			});
 		},
 		setTransfer(state, action) {
-			state.transfers.map(item => {
-				if (item.name === action.payload) {
-					console.log(action.payload);
+			state.transfers = state.transfers.map(item => {
+				if (item.id === action.payload.id) {
 					return {
 						...item,
 						status: true,
@@ -62,7 +68,6 @@ const slice = createSlice({
 					status: false,
 				};
 			});
-			console.log('settransfer');
 		},
 	},
 });

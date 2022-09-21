@@ -1,5 +1,5 @@
 export interface ITransfer {
-	id: string;
+	id: number;
 	name: string;
 	only: boolean;
 	status: boolean;
