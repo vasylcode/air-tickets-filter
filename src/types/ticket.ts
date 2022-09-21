@@ -1,13 +1,4 @@
-export interface Ticket {
+export interface ITicket {
 	id: number;
 	transfers: number;
-}
-
-export interface ServerResponse {
-	tickets: Ticket[];
-}
-
-export interface ICheckbox {
-	name: string;
-	only: boolean;
 }

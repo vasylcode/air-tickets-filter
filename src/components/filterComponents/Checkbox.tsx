@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ICheckbox } from '../../types/ticket';
+import { ICheckbox } from '../../types';
 
 export default function Checkbox({ name, only = false }: ICheckbox) {
 	const [isChecked, setIsChecked] = useState(false);

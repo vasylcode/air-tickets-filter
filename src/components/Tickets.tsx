@@ -2,8 +2,8 @@ import React from 'react';
 import Ticket from './ticketComponents/Ticket';
 import { useGetApiQuery } from '../redux';
 
-const Tickets: React.FC = () => {
-	const { data } = useGetApiQuery();
+export default function Tickets() {
+	const { data } = useGetApiQuery(-1);
 	return (
 		<div className='tickets'>
 			<>
@@ -13,6 +13,4 @@ const Tickets: React.FC = () => {
 			</>
 		</div>
 	);
-};
-
-export default Tickets;
+}

@@ -1,14 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Server } from 'http';
-import { ServerResponse, Ticket } from '../types/ticket';
+import { ITicket } from '../types/ticket';
 
 export const api = createApi({
 	reducerPath: 'api',
 	baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
 	endpoints: build => ({
-		getApi: build.query<Ticket[], void>({
-			query: () => `tickets`,
-			// query: (transfers: number) => `tickets?${transfers && `transfers=${transfers}`}`,
+		getApi: build.query<ITicket[], number>({
+			// query: () => `tickets`,
+			query: (transfers: number) => `tickets?${transfers >= 0 && `transfers=${transfers}`}`,
 			// transformResponse: (response: ServerResponse) => response.tickets,
 		}),
 	}),

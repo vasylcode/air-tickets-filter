@@ -1,12 +1,12 @@
 import React from 'react';
 import './sass/styles.sass';
-import Filter from './components/Filter';
+import Transfers from './components/Transfers';
 import Tickets from './components/Tickets';
 
 export default function App() {
 	return (
 		<div className='wrapper'>
-			<Filter />
+			<Transfers />
 			<Tickets />
 		</div>
 	);
